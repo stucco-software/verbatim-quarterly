@@ -107,6 +107,9 @@ const enrichType = doc => {
     case title.textContent.includes('Paring Pairs'):
       linkNode.href = 'Puzzle'
       break;
+    case title.textContent.includes('EPISTOLA'):
+      linkNode.href = 'Epistola'
+      break;
     case title.textContent.includes('Crossword Puzzle Answers'):
       linkNode.href = 'PuzzleSolution'
       break;
@@ -124,6 +127,9 @@ const enrichAuthor = doc => {
   }
   let title = doc.querySelector('h1')
   let authorLine = title.nextElementSibling
+  if (!authorLine) {
+    return doc
+  }
   if (typeof authorLine !== "string") {
     authorLine = authorLine.firstChild
   }
@@ -134,12 +140,27 @@ const enrichAuthor = doc => {
   return doc
 }
 
+const enrichEpistola = doc => {
+  let articleType = doc.querySelector("link[href=Epistola]")
+  if (!articleType) {
+    return doc
+  }
+  let title = doc.querySelector('h1')
+
+  title.innerHTML = title.innerHTML
+    .replaceAll('{', '<span data-rel="contributor">')
+    .replaceAll('}', '</span>')
+  console.log(title.innerHTML)
+  return doc
+}
+
 const enrichArticle = (content, index) => {
   let doc = parser
     .parseFromString(content, "text/html")
   doc = enrichTitle(doc)
   doc = enrichType(doc)
   doc = enrichAuthor(doc)
+  doc = enrichEpistola(doc)
   console.log(`-------------`)
   return doc
 }
@@ -181,11 +202,15 @@ const convertIssueHeader = (iss, src, numArticles) => {
   let srcSegments = src.split('_')
   let vol = srcSegments[0].split('v')[1]
   let num = srcSegments[1].split('.')[0]
+  let articles = [... new Array(numArticles)]
+    .map((a, i) => src.replace(`.md`, `_${i+1}`))
   let json = {
     type: "Issue",
     volume: vol,
-    number: num
+    number: num,
+    hasPart: articles
   }
+
   let raw = iss
     .replaceAll(`#---`, '')
     .replaceAll(`---`, '')

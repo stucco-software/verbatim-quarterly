@@ -13,7 +13,7 @@
 
 {#each volumes as volume}
   <ul>
-    {#each volume.issues as issue}
+    {#each volume.hasIssue as issue}
       <li>
         <a href="{issue.id}">{issue.title}</a>
       </li>
