@@ -1,0 +1,36 @@
+{
+  "@base": "https://erria.stucco.software/vocabulary#",
+  "@vocab": "vocabulary#",
+  "skos": "https://www.w3.org/TR/skos-reference/#",
+  "uri": "@id",
+  "type": "@type",
+  "title": "title",
+  "html": "html",
+  "render": "render",
+  "published": "published",
+  "by": {
+    "@id": "by",
+    "@type": "@id"
+  },
+  "contributedTo": { "@reverse": "by" },
+  "subject": {
+    "@id": "subject",
+    "@type": "@id"
+  },
+  "subjectOf": { "@reverse": "subject" },
+  "next": {
+    "@id": "next",
+    "@type": "@id"
+  },
+  "prev": { "@reverse": "next" },
+  "hasPart": {
+    "@id": "hasPart",
+    "@type": "@id"
+  },
+  "partOf": { "@reverse": "hasPart" },
+  "broader": {
+    "@id": "broader",
+    "@type": "@id"
+  },
+  "narrower": { "@reverse": "broader" }
+}
