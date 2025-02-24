@@ -49,9 +49,8 @@ export const frame = (graph) => async (query) => {
 const resolveFiles = async (iterable) => await Promise.all(
   iterable.map(async ([path, resolver]) => {
     const data = await resolver()
-    // const html = render(data.default)
-    console.log(data)
-    const rdfa = getRDFa('')
+    const html = render(data.default)
+    const rdfa = getRDFa(html.body)
     let segments = path.split('/')
     let filename = segments[segments.length - 1]
     return {
