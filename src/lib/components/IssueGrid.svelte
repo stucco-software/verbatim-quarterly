@@ -15,7 +15,7 @@
   <ul>
     {#each volume.hasIssue as issue}
       <li>
-        <a href="{issue.id}">{issue.title}</a>
+        <a href="{issue.uri}">{issue.title}</a>
       </li>
     {/each}
   </ul>
