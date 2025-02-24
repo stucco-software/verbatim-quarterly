@@ -9,7 +9,7 @@ const getRDFa = (html) => {
   return json
 }
 
-export const frame = (graph) => async (query) => {
+const frame = (graph) => async (query) => {
   let f = {
     "@context": context,
     ...query
@@ -37,7 +37,7 @@ const resolveFiles = async (iterable) => await Promise.all(
   })
 )
 
-export const getGraph = async () => {
+const getGraph = async () => {
   const allMdFiles = import.meta.glob('../md/*.html')
   console.log(allMdFiles)
   const iterable = Object.entries(allMdFiles)
@@ -46,7 +46,7 @@ export const getGraph = async () => {
   return markdowns
 }
 
-export const getResource = async () => {
+const getResource = async () => {
   const graph = await getGraph()
   console.log(graph)
   // const resource = await frame(graph)({

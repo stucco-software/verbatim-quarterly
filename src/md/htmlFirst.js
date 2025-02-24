@@ -208,9 +208,15 @@ const markdown2html = async (md) => {
 const writeFile = (issue) => async (content, i) => {
   let issueSeg = issue.split('.')
   let newFileName = `${issueSeg[0]}_${i}.html`
+  let txt
+  if (content.body) {
+   txt = content.body.innerHTML
+     .replaceAll('â', ' ')
+  }
+
   let result
   if (content.body) {
-    result = await fs.writeFile(newFileName, content.body.innerHTML)
+    result = await fs.writeFile(newFileName, txt)
   }
   return result
 }

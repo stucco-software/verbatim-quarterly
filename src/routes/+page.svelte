@@ -19,7 +19,7 @@
 
 <nav>
   <a href="/articles">Articles</a>
-  <a href="/index">Index</a>
+  <a href="/terms-index">Index</a>
 </nav>
 
 <form action="/search">
