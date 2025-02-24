@@ -134,45 +134,6 @@ const enrichAuthor = doc => {
   return doc
 }
 
-const associateIndexTerms = (doc, index) => {
-  console.log(`search for index terms in article…`)
-//   var idx = lunr(function () {
-//     this.ref('name')
-//     this.field('text')
-//
-//     this.add({
-//       name: `article`,
-//       text: doc.body.innerHTML
-//     })
-//   })
-  let found = []
-  let not = 0
-  index.forEach(term => {
-    term = term.replaceAll(':', ' ')
-    let exactMatch = doc.body.innerHTML.includes(` ${term} `) || doc.body.innerHTML.includes(`>${term}<`)
-    if (exactMatch) {
-      found.push(term)
-      if (term === 'd-CON') {
-        var count = (doc.body.innerHTML.match(/mythical/g) || []).length;
-        console.log(term, count)
-      }
-    } else {
-      not++
-    }
-    // let result
-    // try {
-    //   result = idx.search(term)
-    // } catch (e) {}
-    // if (result && result.length > 0 && result[0].score > 0.8) {
-    //   console.log(term)
-    //   console.log(result[0].score)
-    // }
-  })
-  console.log(`naive match found ${found.length}, leaving ${not}`)
-  console.log(found)
-  return doc
-}
-
 const enrichArticle = (content, index) => {
   let doc = parser
     .parseFromString(content, "text/html")
@@ -184,13 +145,8 @@ const enrichArticle = (content, index) => {
 }
 
 const addMeta = (issue, count, index) => async (content, i) => {
-  console.log(`Add metadata to: ${issue}.${i}`)
-  if (i > 0) {
-    content = enrichArticle(content, index)
-  }
-  if (i === 20) {
-    associateIndexTerms(content, index)
-  }
+  console.log(`Add metadata to: ${issue}.${i + 1}`)
+  content = enrichArticle(content, index)
   return content
 }
 
@@ -207,7 +163,7 @@ const markdown2html = async (md) => {
 
 const writeFile = (issue) => async (content, i) => {
   let issueSeg = issue.split('.')
-  let newFileName = `${issueSeg[0]}_${i}.html`
+  let newFileName = `${issueSeg[0]}_${i + 1}.html`
   let txt
   if (content.body) {
    txt = content.body.innerHTML
@@ -221,18 +177,49 @@ const writeFile = (issue) => async (content, i) => {
   return result
 }
 
+const convertIssueHeader = (iss, src, numArticles) => {
+  let srcSegments = src.split('_')
+  let vol = srcSegments[0].split('v')[1]
+  let num = srcSegments[1].split('.')[0]
+  let json = {
+    type: "Issue",
+    volume: vol,
+    number: num
+  }
+  let raw = iss
+    .replaceAll(`#---`, '')
+    .replaceAll(`---`, '')
+
+  let lls = raw
+    .split('\n')
+    .filter(ll => ll.length > 1)
+  let kvs = lls
+    .map(ll => ll.split(': '))
+  kvs.forEach(ll => {
+    let key = ll[0]
+    let val = ll[1]
+    json[key] = val
+  })
+  return json
+}
+
 const run = async (issue) => {
   let start = new Date()
   const total_index = await getIndex()
   const index = total_index.get(issue)
   const articles = await parseIssueToArticles(issue)
+  const iss = articles.shift()
+
   // Any work with the raw MD happens here
   // …
   const htmls = await asyncMap(articles, markdown2html)
   // any work with the HTML happens here
   const withMetaData = await asyncMap(htmls, addMeta(issue, articles.length, index))
 
+  const issJSON = convertIssueHeader(iss, issue, articles.length)
+
   const errors = await asyncMap(withMetaData, writeFile(issue))
+  const issueError = await fs.writeFile(issue.replace(".md", ".json"), JSON.stringify(issJSON, null, 2))
   let uniq = [...new Set(errors)]
   if (uniq[0]) {
     console.log(`ERRORS:`)
