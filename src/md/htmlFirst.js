@@ -9,11 +9,13 @@ import bracketedSpans from 'remark-bracketed-spans'
 import {unified} from 'unified'
 import { JSDOM } from 'jsdom'
 
+
 const window = new JSDOM().window
 const DOMParser = window.DOMParser
 const parser = new DOMParser()
 
 const asyncMap = async (arr, fn) => await Promise.all(arr.map(fn))
+const arrayify = target => Array.isArray(target) ? target : [target]
 
 // Index
 const roman2arabic = s => {
@@ -107,11 +109,14 @@ const enrichType = doc => {
     case title.textContent.includes('Paring Pairs'):
       linkNode.href = 'Puzzle'
       break;
+    case title.textContent.includes('Crossword'):
+      linkNode.href = 'Crossword'
+      break;
     case title.textContent.includes('EPISTOLA'):
       linkNode.href = 'Epistola'
       break;
     case title.textContent.includes('Crossword Puzzle Answers'):
-      linkNode.href = 'PuzzleSolution'
+      linkNode.href = 'CrosswordSolution'
       break;
     default:
       linkNode.href = 'Article'
@@ -150,7 +155,6 @@ const enrichEpistola = doc => {
   title.innerHTML = title.innerHTML
     .replaceAll('{', '<span data-rel="contributor">')
     .replaceAll('}', '</span>')
-  console.log(title.innerHTML)
   return doc
 }
 
@@ -169,6 +173,40 @@ const addMeta = (issue, count, index) => async (content, i) => {
   console.log(`Add metadata to: ${issue}.${i + 1}`)
   content = enrichArticle(content, index)
   return content
+}
+
+export const rdfa2json = (html) => {
+  const propertyNodes = [
+    ...html.querySelectorAll('[property]'),
+    ...html.querySelectorAll('[rel]'),
+    ...html.querySelectorAll('[data-rel]')
+  ]
+
+  let predicates = propertyNodes
+    .map(node => {
+      let rel = {}
+      let p = node.getAttribute("property") || node.getAttribute('rel') || node.getAttribute('data-rel')
+      let o = (node.getAttribute('href') || node.textContent.trim())
+      rel[p] = o
+      return rel
+    })
+
+  const predicateMap = new Map(predicates.map(rel => Object.keys(rel)))
+
+  predicates.forEach(rel => {
+    let p = Object.keys(rel)[0]
+    let cur = Object.values(rel)[0]
+    let acc = predicateMap.get(p)
+    let pushO = acc
+      ? [...arrayify(acc), cur]
+      : cur
+    predicateMap.set(p, pushO)
+  })
+
+  const rels = Object.fromEntries(predicateMap)
+
+  rels.html = html.body.innerHTML
+  return rels
 }
 
 const markdown2html = async (md) => {
@@ -228,6 +266,19 @@ const convertIssueHeader = (iss, src, numArticles) => {
   return json
 }
 
+const html2json = (article) => {
+  let json = rdfa2json(article)
+  console.log(json)
+  return json
+}
+
+const writeJson = (issue) => async (article, i) => {
+  let issueSeg = issue.split('.')
+  let newFileName = `${issueSeg[0]}_${i + 1}.json`
+  const articleErr = await fs.writeFile(newFileName, JSON.stringify(article, null, 2))
+  return articleErr
+}
+
 const run = async (issue) => {
   let start = new Date()
   const total_index = await getIndex()
@@ -242,9 +293,12 @@ const run = async (issue) => {
   const withMetaData = await asyncMap(htmls, addMeta(issue, articles.length, index))
 
   const issJSON = convertIssueHeader(iss, issue, articles.length)
-
   const errors = await asyncMap(withMetaData, writeFile(issue))
+  const articleJSONs = await asyncMap(withMetaData, html2json)
+  const jsonErrs = await asyncMap(articleJSONs, writeJson(issue))
+
   const issueError = await fs.writeFile(issue.replace(".md", ".json"), JSON.stringify(issJSON, null, 2))
+
   let uniq = [...new Set(errors)]
   if (uniq[0]) {
     console.log(`ERRORS:`)
