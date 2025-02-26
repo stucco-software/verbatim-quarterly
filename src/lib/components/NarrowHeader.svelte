@@ -1,0 +1,7 @@
+<p>
+  <a href="/">Verbatim</a>
+  <br>
+  The Language Quarterly
+  <br>
+  1974 – 2008
+</p>

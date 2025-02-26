@@ -1,25 +1,14 @@
 <script>
+  import NarrowHeader from "$lib/components/NarrowHeader.svelte"
   let { data } = $props()
   let { issue } = data
   let articles = issue.hasPart
     .filter(node => node.type === 'Article')
-  console.log(issue)
 </script>
 
 
 
-<p>
-  <a href="/">Verbatim</a>
-  <br>
-  The Language Quarterly
-  <br>
-  1974 – 2008
-</p>
-
-<header>
-  <h1>{issue.title}</h1>
-  <h2>{issue.season}, {issue.year}</h2>
-</header>
+<NarrowHeader />
 
 <nav>
   <h2>Table of Contents</h2>

@@ -88,6 +88,15 @@ export const getRandomArticle = async () => {
   return article
 }
 
+export const getArticles = async () => {
+  const graph = await getGraph()
+  const articles = await frame(graph)({
+    "type": "Article",
+    "partOf": {},
+    "uri": {}
+  })
+  return articles['@graph']
+}
 
 export const getIssue = async (uri) => {
   const graph = await getGraph()
