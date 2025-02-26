@@ -75,13 +75,36 @@ export const getResource = async () => {
   return graph
 }
 
+const getRand = arr => arr[Math.floor(Math.random() * arr.length)]
+
+export const getRandomArticle = async () => {
+  const graph = await getGraph()
+  const articles = await frame(graph)({
+    "type": "Article",
+    "partOf": {},
+    "uri": {}
+  })
+  let article = getRand(articles['@graph'])
+  return article
+}
+
+
+export const getIssue = async (uri) => {
+  const graph = await getGraph()
+  const issue = await frame(graph)({
+    "uri": uri
+  })
+  delete issue['@context']
+  return issue
+}
+
 export const getVolumes = async () => {
   const graph = await getGraph()
-  const issues = await frame(graph)({
+  const volumes = await frame(graph)({
     "type": "Volume",
     "hasIssue": {}
   })
 
-  delete issues['@context']
-  return issues['@graph'] ? issues['@graph'] : [issues]
+  delete volumes['@context']
+  return volumes['@graph'] ? volumes['@graph'] : [volumes]
 }

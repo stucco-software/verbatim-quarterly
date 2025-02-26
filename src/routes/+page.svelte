@@ -4,7 +4,7 @@
   import TermCallout from "$lib/components/TermCallout.svelte"
 
   let { data } = $props()
-  let { volumes } = data
+  let { volumes, article } = data
   // to get random article, get all the article URIs (not too big, 120?)
   // then pick a rando URI
   // then FETCH the html of that URI and render it into this DOM.
@@ -13,6 +13,8 @@
   // TK: Get random author or index term
   // Not totally sure how to do this… similar plan I think.
   let placeholderQuery = "Icthyophobia"
+
+  console.log(article)
 </script>
 
 <header>
@@ -36,7 +38,7 @@
 </form>
 
 <h2 class='txt-center'>Random Article:</h2>
-<ArticlePreview></ArticlePreview>
+<ArticlePreview {article}></ArticlePreview>
 
 <TermCallout />
 

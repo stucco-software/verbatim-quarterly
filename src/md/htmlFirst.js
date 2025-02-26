@@ -204,8 +204,14 @@ export const rdfa2json = (html) => {
   })
 
   const rels = Object.fromEntries(predicateMap)
+  let preview = [...html.querySelector('body').children]
+    .slice(0, 6)
+    .map(node => node.outerHTML)
+    .join(' ')
 
   rels.html = html.body.innerHTML
+  rels.preview = preview
+
   return rels
 }
 

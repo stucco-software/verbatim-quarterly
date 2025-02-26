@@ -1,5 +1,6 @@
 {
   "type": "SicSicSic",
   "title": "SIC! SIC! SIC!",
-  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>Ristorante 75, N.Y.C., offers “Toastada Italianoâw/\nAmaretto Butter Syrup” and “SankaccinoâSanka, steamed\nmilk &amp; cinnamon.”  [Submitted by Dennis Wepman, Bronx.]</p>"
+  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>Ristorante 75, N.Y.C., offers “Toastada Italianoâw/\nAmaretto Butter Syrup” and “SankaccinoâSanka, steamed\nmilk &amp; cinnamon.”  [Submitted by Dennis Wepman, Bronx.]</p>",
+  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h2 data-rel=\"title\">SIC! SIC! SIC!</h2> <p>Ristorante 75, N.Y.C., offers “Toastada Italianoâw/\nAmaretto Butter Syrup” and “SankaccinoâSanka, steamed\nmilk &amp; cinnamon.”  [Submitted by Dennis Wepman, Bronx.]</p>"
 }

@@ -1,5 +1,6 @@
 {
   "type": "Article",
   "title": "",
-  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\"></h1>"
+  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\"></h1>",
+  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\"></h1>"
 }
