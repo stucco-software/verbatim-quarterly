@@ -108,14 +108,15 @@ export const getIssue = async (uri) => {
 }
 
 export const getIndex = async () => {
+  console.log('get graph…')
   const graph = await getGraph()
-  // const index = await frame(graph)({
-  //   "type": "Index"
-  // })
-  // delete index['@context']
-  return {
-    terms: []
-  }
+  console.log('frame index…')
+  const index = await frame(graph)({
+    "type": "Index"
+  })
+  console.log('return index…')
+  delete index['@context']
+  return index
 }
 
 export const getVolumes = async () => {

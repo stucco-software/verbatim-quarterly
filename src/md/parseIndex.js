@@ -73,20 +73,28 @@ const processLine = (ll) => {
   return convertFn(ll)
 }
 
-const processIndex = (data) => {
+const processIndex = async (data) => {
   let lls = data
     .split('\n')
     .filter(ll => ll.length > 0)
     .map(processLine)
-  let llsHTML = asyncMap(lls, markdown2html)
+  let llsHTML = await asyncMap(lls, markdown2html)
   return llsHTML
 }
 
 const getIndex = async () => {
   console.log(`Parse index into data structure:`)
   const raw = await fs.readFile('vb_index.md', "binary")
-  const data = processIndex(raw)
-  return data
+  const data = await processIndex(raw)
+  console.log(data)
+  const index = data.map((html, i) => {
+    return {
+      type: "Term",
+      uri: `i${i}`,
+      html: html
+    }
+  })
+  return index
 }
 
 const writeJson = async (data) => {
@@ -100,7 +108,8 @@ const run = async () => {
   const terms = await getIndex()
   const index = {
     type: "Index",
-    terms,
+    uri: "term-index",
+    collects: terms,
   }
   console.log(index)
   const errors = await writeJson(index)

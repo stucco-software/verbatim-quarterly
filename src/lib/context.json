@@ -13,6 +13,11 @@
     "@type": "@id"
   },
   "contributedTo": { "@reverse": "by" },
+  "collects": {
+    "@id": "collects",
+    "@type": "@id"
+  },
+  "collectedIn": { "@reverse": "collects" },
   "subject": {
     "@id": "subject",
     "@type": "@id"

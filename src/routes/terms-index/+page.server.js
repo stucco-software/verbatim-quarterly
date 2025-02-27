@@ -1,8 +1,6 @@
-import { getIndex } from '$lib/content.js'
+import index from '$lib/index.json'
 
 export const load = async ({params}) => {
-  console.log('get index…')
-  const index = await getIndex()
   return {
     index
   }
