@@ -2,6 +2,11 @@ import * as pagefind from "pagefind"
 import { promises as fs } from "fs"
 import asyncMap from "./src/lib/asyncMap.js"
 import terms from "./src/lib/index.json" with { type: "json" }
+import { JSDOM } from 'jsdom'
+
+const DOMParser = new JSDOM().window.DOMParser
+
+const parser = new DOMParser()
 
 const readFile = async (filename) => {
   const data = await fs.readFile(`src/md/${filename}`, "binary")
@@ -29,9 +34,11 @@ const getGraph = async () => {
 const indexNode = (index) => async (node) => {
   let seg = node.uri.split('_')
   let url = `/${seg[0]}_${seg[1]}#${seg[2]}`
+  let html = parser
+    .parseFromString(node.html, "text/html")
   return await index.addCustomRecord({
       url: url,
-      content: node.html,
+      content: html.body.textContent,
       language: "en",
       meta: {
         title: node.title,
