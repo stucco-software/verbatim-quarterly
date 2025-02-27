@@ -107,6 +107,17 @@ export const getIssue = async (uri) => {
   return issue
 }
 
+export const getIndex = async () => {
+  const graph = await getGraph()
+  // const index = await frame(graph)({
+  //   "type": "Index"
+  // })
+  // delete index['@context']
+  return {
+    terms: []
+  }
+}
+
 export const getVolumes = async () => {
   const graph = await getGraph()
   const volumes = await frame(graph)({

@@ -9,68 +9,12 @@ import bracketedSpans from 'remark-bracketed-spans'
 import {unified} from 'unified'
 import { JSDOM } from 'jsdom'
 
-
 const window = new JSDOM().window
 const DOMParser = window.DOMParser
 const parser = new DOMParser()
 
 const asyncMap = async (arr, fn) => await Promise.all(arr.map(fn))
 const arrayify = target => Array.isArray(target) ? target : [target]
-
-// Index
-const roman2arabic = s => {
-  const map = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000};
-  return [...s].reduce((r,c,i,s) => map[s[i+1]] > map[c] ? r-map[c] : r+map[c], 0);
-}
-
-const isRomanLocation = (segment) => {
-  return segment.startsWith('X.') || segment.startsWith('XX') || segment.startsWith('XV') || segment.startsWith('XI') || segment.startsWith('V.') || segment.startsWith('VI') || segment.startsWith('I.')
-}
-
-const convertLocation = (indexMap) => (segment, ll) => {
-  if (isRomanLocation(segment)) {
-    let locationSections = segment.split('.')
-    let volume = roman2arabic(locationSections[0])
-    let issue = locationSections[1]
-    let location = `v${volume}_${issue}.md`
-    let term = ll
-      .replaceAll('*', '')
-      .replaceAll(',"', '",')
-      .split(', ')
-      .filter(segment => !isRomanLocation(segment))
-      .join(', ')
-    let extantTermsAtLocation = indexMap.get(location) || []
-    indexMap.set(location, [...extantTermsAtLocation, term])
-  }
-}
-
-const processLine = (ll, convertFn) => {
-  ll
-    .replaceAll('*', '')
-    .replaceAll(',"', '",')
-    .split(', ')
-    .map(segment => convertFn(segment, ll))
-  return ll
-}
-
-const breakToLocations = (data) => {
-  let indexMap = new Map()
-  let convertFn = convertLocation(indexMap)
-  let lls = data
-    .split('\n')
-    .filter(ll => ll.length > 0)
-    .map(ll => processLine(ll, convertFn))
-  console.log(`index of ${[...indexMap.keys()].length} locations`)
-  return indexMap
-}
-
-const getIndex = async () => {
-  console.log(`Parse index into data structure:`)
-  const data = await fs.readFile('vb_index.md', "binary")
-  let index = breakToLocations(data)
-  return index
-}
-// EndIndex
 
 const parseIssueToArticles = async (src) => {
   const data = await fs.readFile(src, "binary")
@@ -158,7 +102,7 @@ const enrichEpistola = doc => {
   return doc
 }
 
-const enrichArticle = (content, index) => {
+const enrichArticle = (content) => {
   let doc = parser
     .parseFromString(content, "text/html")
   doc = enrichTitle(doc)
@@ -169,9 +113,9 @@ const enrichArticle = (content, index) => {
   return doc
 }
 
-const addMeta = (issue, count, index) => async (content, i) => {
+const addMeta = (issue, count) => async (content, i) => {
   console.log(`Add metadata to: ${issue}.${i + 1}`)
-  content = enrichArticle(content, index)
+  content = enrichArticle(content)
   return content
 }
 
@@ -287,8 +231,7 @@ const writeJson = (issue) => async (article, i) => {
 
 const run = async (issue) => {
   let start = new Date()
-  const total_index = await getIndex()
-  const index = total_index.get(issue)
+
   const articles = await parseIssueToArticles(issue)
   const iss = articles.shift()
 
@@ -296,7 +239,7 @@ const run = async (issue) => {
   // …
   const htmls = await asyncMap(articles, markdown2html)
   // any work with the HTML happens here
-  const withMetaData = await asyncMap(htmls, addMeta(issue, articles.length, index))
+  const withMetaData = await asyncMap(htmls, addMeta(issue, articles.length))
 
   const issJSON = convertIssueHeader(iss, issue, articles.length)
   const errors = await asyncMap(withMetaData, writeFile(issue))
