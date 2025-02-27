@@ -1,6 +1,7 @@
 import { svelteTesting } from "@testing-library/svelte/vite";
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { pagefind } from "vite-plugin-pagefind";
 
 export default defineConfig({
     plugins: [sveltekit()],
@@ -8,7 +9,10 @@ export default defineConfig({
     test: {
         workspace: [{
             extends: "./vite.config.js",
-            plugins: [svelteTesting()],
+            plugins: [
+                svelteTesting(),
+                pagefind()
+            ],
 
             test: {
                 name: "client",

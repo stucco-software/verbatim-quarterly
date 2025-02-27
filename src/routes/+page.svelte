@@ -2,7 +2,7 @@
   import IssueGrid from "$lib/components/IssueGrid.svelte"
   import ArticlePreview from "$lib/components/ArticlePreview.svelte"
   import TermCallout from "$lib/components/TermCallout.svelte"
-
+  import { onMount } from 'svelte'
   let { data } = $props()
   let { volumes, article } = data
   // to get random article, get all the article URIs (not too big, 120?)
@@ -13,8 +13,6 @@
   // TK: Get random author or index term
   // Not totally sure how to do this… similar plan I think.
   let placeholderQuery = "Icthyophobia"
-
-  console.log(article)
 </script>
 
 <header>
