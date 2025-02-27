@@ -1,9 +1,13 @@
 <script type="text/javascript">
   import {onMount} from 'svelte'
+  let { s } = $props()
   onMount(async () => {
-    new PagefindUI({ element: "#search", showSubResults: true });
+    let search = new PagefindUI({ element: "#search", showSubResults: true });
+    if (s) {
+      console.log('search for…', s)
+      search.triggerSearch(s)
+    }
   })
 </script>
 
-<mark>SRACH BOX</mark>
 <div id="search"></div>

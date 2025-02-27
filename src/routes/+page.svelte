@@ -2,6 +2,7 @@
   import IssueGrid from "$lib/components/IssueGrid.svelte"
   import ArticlePreview from "$lib/components/ArticlePreview.svelte"
   import TermCallout from "$lib/components/TermCallout.svelte"
+  import Search from "$lib/components/Search.svelte"
   import { onMount } from 'svelte'
   let { data } = $props()
   let { volumes, article } = data
@@ -26,13 +27,14 @@
   <a href="/terms-index">Index</a>
 </nav>
 
+<!-- <Search></Search> -->
 <form action="/search">
-  <label>Search</label>
-  <!-- Placeholder -->
+  <label for="search">Search</label>
   <input
-    placeholder="{placeholderQuery}…"
     type="text"
-    name="q">
+    name="s"
+    placeholder="{placeholderQuery}…"
+    id="search">
 </form>
 
 <h2 class='txt-center'>Random Article:</h2>

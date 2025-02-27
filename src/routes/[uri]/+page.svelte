@@ -6,8 +6,6 @@
     .filter(node => node.type === 'Article')
 </script>
 
-
-
 <NarrowHeader />
 
 <nav>
