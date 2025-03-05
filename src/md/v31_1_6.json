@@ -1,0 +1,6 @@
+{
+  "type": "Article",
+  "title": "My Genetic Code",
+  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">My Genetic Code</h1>\n<p>... _ _ _ ...</p>\n<p>—<em>Louis Phillips</em></p>",
+  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">My Genetic Code</h1> <p>... _ _ _ ...</p> <p>—<em>Louis Phillips</em></p>"
+}

@@ -1,6 +1,6 @@
 {
   "type": "SicSicSic",
   "title": "SIC! SIC! SIC!",
-  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>“THE LOS ALAMOS SCHOOLS SUMMER SCHOOL PROGRAM\nWILL NOT DISCRIMINATE AGAINST ANY PERSON BECAUSE OF\nRACE, CREED, NATURAL ORIGIN, SEX, AGE OR HANDICAP.”â<em>Los\nAlamos Schools Summer School, General Information</em>.  [Submitted\nby Barbara DuBois, Los Alamos.]</p>",
-  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h2 data-rel=\"title\">SIC! SIC! SIC!</h2> <p>“THE LOS ALAMOS SCHOOLS SUMMER SCHOOL PROGRAM\nWILL NOT DISCRIMINATE AGAINST ANY PERSON BECAUSE OF\nRACE, CREED, NATURAL ORIGIN, SEX, AGE OR HANDICAP.”â<em>Los\nAlamos Schools Summer School, General Information</em>.  [Submitted\nby Barbara DuBois, Los Alamos.]</p>"
+  "html": "<link rel=\"type\" href=\"SicSicSic\"><h1 data-rel=\"title\">SIC! SIC! SIC!</h1>\n<p>“THE LOS ALAMOS SCHOOLS SUMMER SCHOOL PROGRAM\nWILL NOT DISCRIMINATE AGAINST ANY PERSON BECAUSE OF\nRACE, CREED, NATURAL ORIGIN, SEX, AGE OR HANDICAP.”—<em>Los\nAlamos Schools Summer School, General Information</em>.  [Submitted\nby Barbara DuBois, Los Alamos.]</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h1 data-rel=\"title\">SIC! SIC! SIC!</h1> <p>“THE LOS ALAMOS SCHOOLS SUMMER SCHOOL PROGRAM\nWILL NOT DISCRIMINATE AGAINST ANY PERSON BECAUSE OF\nRACE, CREED, NATURAL ORIGIN, SEX, AGE OR HANDICAP.”—<em>Los\nAlamos Schools Summer School, General Information</em>.  [Submitted\nby Barbara DuBois, Los Alamos.]</p> <h1></h1>"
 }

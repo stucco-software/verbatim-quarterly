@@ -2,7 +2,8 @@
   import NarrowHeader from "$lib/components/NarrowHeader.svelte"
   let { data } = $props()
   let { issue } = data
-  let articles = issue.hasPart
+  let parts = issue.hasPart ? issue.hasPart : []
+  let articles = parts
     .filter(node => node.type === 'Article')
 </script>
 

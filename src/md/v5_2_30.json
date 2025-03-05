@@ -1,0 +1,8 @@
+{
+  "type": "Article",
+  "title": "Notes Found in Bottles",
+  "author": "Deborah Wing",
+  "location": "",
+  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">Notes Found in Bottles</h1>\n<p><em><span data-rel=\"author\">Deborah Wing</span> <span data-rel=\"location\"></span></em></p>\n<p><em>Location of find</em>: The Thames at Coventry</p>\n<p><em>Inscription</em>: “The night has a thousand eyes, the\nday but one... alas....</p>\n<p>— Godiva”</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">Notes Found in Bottles</h1> <p><em><span data-rel=\"author\">Deborah Wing</span> <span data-rel=\"location\"></span></em></p> <p><em>Location of find</em>: The Thames at Coventry</p> <p><em>Inscription</em>: “The night has a thousand eyes, the\nday but one... alas....</p> <p>— Godiva”</p>"
+}

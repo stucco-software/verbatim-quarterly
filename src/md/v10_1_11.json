@@ -1,6 +1,6 @@
 {
   "type": "SicSicSic",
   "title": "SIC! SIC! SIC!",
-  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>“You almost expect people to fall on their knees and\ngenuflect when they come here.”  [Carl Graziano, executive\nassistant to the State Supreme Court (N.Y.), quoted in <em>The New\nYork Times</em>, 23 May 1983.  Submitted by M. Jordan, Ardmore,\nPennsylvania.]</p>",
-  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h2 data-rel=\"title\">SIC! SIC! SIC!</h2> <p>“You almost expect people to fall on their knees and\ngenuflect when they come here.”  [Carl Graziano, executive\nassistant to the State Supreme Court (N.Y.), quoted in <em>The New\nYork Times</em>, 23 May 1983.  Submitted by M. Jordan, Ardmore,\nPennsylvania.]</p>"
+  "html": "<link rel=\"type\" href=\"SicSicSic\"><h1 data-rel=\"title\">SIC! SIC! SIC!</h1>\n<p>“You almost expect people to fall on their knees and\ngenuflect when they come here.”  [Carl Graziano, executive\nassistant to the State Supreme Court (N.Y.), quoted in <em>The New\nYork Times</em>, 23 May 1983.  Submitted by M. Jordan, Ardmore,\nPennsylvania.]</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h1 data-rel=\"title\">SIC! SIC! SIC!</h1> <p>“You almost expect people to fall on their knees and\ngenuflect when they come here.”  [Carl Graziano, executive\nassistant to the State Supreme Court (N.Y.), quoted in <em>The New\nYork Times</em>, 23 May 1983.  Submitted by M. Jordan, Ardmore,\nPennsylvania.]</p> <h1></h1>"
 }

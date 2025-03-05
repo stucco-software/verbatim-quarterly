@@ -1,6 +1,5 @@
 <script type="text/javascript">
   let { volumes } = $props()
-  console.log(volumes)
 </script>
 
 <h2>

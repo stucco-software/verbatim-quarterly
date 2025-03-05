@@ -1,0 +1,7 @@
+{
+  "type": "Epistola",
+  "title": "EPISTOLA Bob Joyce",
+  "contributor": "Bob Joyce",
+  "html": "<link rel=\"type\" href=\"Epistola\"><h1 data-rel=\"title\">EPISTOLA <span data-rel=\"contributor\">Bob Joyce</span></h1>\n<p>In OBITER DICTA [XXIII,3,16] Tony Hall writes... “the square of 5.5 is not a simple piece of mental arithmetic.” But it is! The square of any number that ends in 5 (typically n5) = [n(n+1)]25. Thus the square of 5.5 = (5.6)25, or 30.25.</p>\n<p><em>[Bob Joyce, Sun City Center, Florida]</em></p>\n<h2></h2>",
+  "preview": "<link rel=\"type\" href=\"Epistola\"> <h1 data-rel=\"title\">EPISTOLA <span data-rel=\"contributor\">Bob Joyce</span></h1> <p>In OBITER DICTA [XXIII,3,16] Tony Hall writes... “the square of 5.5 is not a simple piece of mental arithmetic.” But it is! The square of any number that ends in 5 (typically n5) = [n(n+1)]25. Thus the square of 5.5 = (5.6)25, or 30.25.</p> <p><em>[Bob Joyce, Sun City Center, Florida]</em></p> <h2></h2>"
+}

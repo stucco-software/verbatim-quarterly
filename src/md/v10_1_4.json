@@ -1,6 +1,6 @@
 {
   "type": "SicSicSic",
   "title": "SIC! SIC! SIC!",
-  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>“We treated between 70 and 71 people.”  [Mary Zeigler,\nassistant director of nursing at Coshocton County Memorial\nHospital, quoted in <em>The Columbus Dispatch</em> 27 March 1983.\nSubmitted by Dorothy Brauson, Columbus, Ohio.]</p>",
-  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h2 data-rel=\"title\">SIC! SIC! SIC!</h2> <p>“We treated between 70 and 71 people.”  [Mary Zeigler,\nassistant director of nursing at Coshocton County Memorial\nHospital, quoted in <em>The Columbus Dispatch</em> 27 March 1983.\nSubmitted by Dorothy Brauson, Columbus, Ohio.]</p>"
+  "html": "<link rel=\"type\" href=\"SicSicSic\"><h1 data-rel=\"title\">SIC! SIC! SIC!</h1>\n<p>“We treated between 70 and 71 people.”  [Mary Zeigler,\nassistant director of nursing at Coshocton County Memorial\nHospital, quoted in <em>The Columbus Dispatch</em> 27 March 1983.\nSubmitted by Dorothy Brauson, Columbus, Ohio.]</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h1 data-rel=\"title\">SIC! SIC! SIC!</h1> <p>“We treated between 70 and 71 people.”  [Mary Zeigler,\nassistant director of nursing at Coshocton County Memorial\nHospital, quoted in <em>The Columbus Dispatch</em> 27 March 1983.\nSubmitted by Dorothy Brauson, Columbus, Ohio.]</p> <h1></h1>"
 }

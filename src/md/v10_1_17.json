@@ -1,6 +1,6 @@
 {
   "type": "SicSicSic",
   "title": "SIC! SIC! SIC!",
-  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>“<em>TOPIC:</em> Common Genital Heart Lesions in the Child &amp;\nAdult.”  [Title of a Conference held 8 March 1983 at the\nDepartment of Internal Medicine, University of Virginia Medical\nSchool.  Submitted by Johannes Veldhuis, Charlottesville,\nVirginia.]</p>",
-  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h2 data-rel=\"title\">SIC! SIC! SIC!</h2> <p>“<em>TOPIC:</em> Common Genital Heart Lesions in the Child &amp;\nAdult.”  [Title of a Conference held 8 March 1983 at the\nDepartment of Internal Medicine, University of Virginia Medical\nSchool.  Submitted by Johannes Veldhuis, Charlottesville,\nVirginia.]</p>"
+  "html": "<link rel=\"type\" href=\"SicSicSic\"><h1 data-rel=\"title\">SIC! SIC! SIC!</h1>\n<p>“<em>TOPIC:</em> Common Genital Heart Lesions in the Child &amp;\nAdult.”  [Title of a Conference held 8 March 1983 at the\nDepartment of Internal Medicine, University of Virginia Medical\nSchool.  Submitted by Johannes Veldhuis, Charlottesville,\nVirginia.]</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h1 data-rel=\"title\">SIC! SIC! SIC!</h1> <p>“<em>TOPIC:</em> Common Genital Heart Lesions in the Child &amp;\nAdult.”  [Title of a Conference held 8 March 1983 at the\nDepartment of Internal Medicine, University of Virginia Medical\nSchool.  Submitted by Johannes Veldhuis, Charlottesville,\nVirginia.]</p> <h1></h1>"
 }

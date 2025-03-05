@@ -108,13 +108,10 @@ export const getIssue = async (uri) => {
 }
 
 export const getIndex = async () => {
-  console.log('get graph…')
   const graph = await getGraph()
-  console.log('frame index…')
   const index = await frame(graph)({
     "type": "Index"
   })
-  console.log('return index…')
   delete index['@context']
   return index
 }
@@ -127,5 +124,7 @@ export const getVolumes = async () => {
   })
 
   delete volumes['@context']
-  return volumes['@graph'] ? volumes['@graph'] : [volumes]
+  let data = volumes['@graph'] ? volumes['@graph'] : [volumes]
+  data = data.sort((a,b) => parseInt(a.uri) - parseInt(b.uri))
+  return data
 }

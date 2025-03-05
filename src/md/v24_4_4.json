@@ -1,0 +1,8 @@
+{
+  "type": "Article",
+  "title": "Primer",
+  "author": "David Galef",
+  "location": "Oxford, Mississippi",
+  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">Primer</h1>\n<p><em><span data-rel=\"author\">David Galef</span> <span data-rel=\"location\">Oxford, Mississippi</span></em></p>\n<p>The <em>epigram</em>'s a pithy saying,</p>\n<p>Full of paradox and wit.</p>\n<p>The <em>epithet</em>'s a brief description,</p>\n<p>A clever name that scores a hit.</p>\n<p>The <em>epigraph</em>'s a type of preface,</p>\n<p>Like the lead-in to a writ.</p>\n<p>The <em>epitaph</em> is seen on tombstones,</p>\n<p>Related to who's under it.</p>\n<p>All four are commonly confused,</p>\n<p>But in each usage, three don't fit.</p>\n<h2></h2>",
+  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">Primer</h1> <p><em><span data-rel=\"author\">David Galef</span> <span data-rel=\"location\">Oxford, Mississippi</span></em></p> <p>The <em>epigram</em>'s a pithy saying,</p> <p>Full of paradox and wit.</p> <p>The <em>epithet</em>'s a brief description,</p>"
+}

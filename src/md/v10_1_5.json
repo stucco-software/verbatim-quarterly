@@ -1,6 +1,6 @@
 {
   "type": "SicSicSic",
   "title": "SIC! SIC! SIC!",
-  "html": "<link rel=\"type\" href=\"SicSicSic\"><h2 data-rel=\"title\">SIC! SIC! SIC!</h2>\n<p>“...the test of the MG Turbo Metro revealed the achilles'\nheel of mixing old and new wines.  By this I mean the 'A series\nengine' has been coupled to a Turbo.”  [“Road Test,” by Denzil\nAngoves, in <em>Somerset &amp; West</em>, April 1983.  Submitted by John\nBrunner, South Petherton, Somerset.]</p>",
-  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h2 data-rel=\"title\">SIC! SIC! SIC!</h2> <p>“...the test of the MG Turbo Metro revealed the achilles'\nheel of mixing old and new wines.  By this I mean the 'A series\nengine' has been coupled to a Turbo.”  [“Road Test,” by Denzil\nAngoves, in <em>Somerset &amp; West</em>, April 1983.  Submitted by John\nBrunner, South Petherton, Somerset.]</p>"
+  "html": "<link rel=\"type\" href=\"SicSicSic\"><h1 data-rel=\"title\">SIC! SIC! SIC!</h1>\n<p>“...the test of the MG Turbo Metro revealed the achilles'\nheel of mixing old and new wines.  By this I mean the 'A series\nengine' has been coupled to a Turbo.”  [“Road Test,” by Denzil\nAngoves, in <em>Somerset &amp; West</em>, April 1983.  Submitted by John\nBrunner, South Petherton, Somerset.]</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"SicSicSic\"> <h1 data-rel=\"title\">SIC! SIC! SIC!</h1> <p>“...the test of the MG Turbo Metro revealed the achilles'\nheel of mixing old and new wines.  By this I mean the 'A series\nengine' has been coupled to a Turbo.”  [“Road Test,” by Denzil\nAngoves, in <em>Somerset &amp; West</em>, April 1983.  Submitted by John\nBrunner, South Petherton, Somerset.]</p> <h1></h1>"
 }

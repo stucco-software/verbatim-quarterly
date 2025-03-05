@@ -8,9 +8,11 @@ const config = {
 		adapter: adapter(),
         prerender: {
             handleHttpError: ({ path, referrer, message }) => {
-                // otherwise fail the build
                 return
-            }
+            },
+            handleMissingId: ({ path, referrer, message }) => {
+                return
+            },
         }
 	},
     preprocess: [mdsvex(mdsvexConfig)],
