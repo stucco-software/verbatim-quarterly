@@ -33,9 +33,6 @@
 </main>
 
 <style type="text/css">
-  header {
-    text-align: center;
-  }
   nav {
     border: 1px solid black;
     padding: 1rem;

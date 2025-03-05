@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
   let { article } = $props()
 </script>
 
