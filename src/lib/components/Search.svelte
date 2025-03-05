@@ -8,10 +8,15 @@
       showSubResults: true
     });
     if (s) {
-      console.log('search for…', s)
       search.triggerSearch(s)
     }
+    $effect(() => {
+      console.log('search for…', s)
+      search.triggerSearch(s)
+    })
   })
+
+
 </script>
 
 <div id="search"></div>
