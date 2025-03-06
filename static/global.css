@@ -30,3 +30,48 @@ body {
     gap: var(--grid-gutter);
   }
 }
+
+.text-body {
+  margin-block-start: var(--lead-3xl);
+  max-width: 52rem;
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.text-body .Article [data-rel="title"] {
+  font-style: italic;
+  font-size: var(--txt-6);
+}
+
+.text-body .Bibliographia [data-rel="title"],
+.text-body .Epistola [data-rel="title"],
+.text-body .ObiterDicta [data-rel="title"],
+.text-body .SicSicSic [data-rel="title"] {
+  font-family: "Openface";
+  font-size: var(--txt-4);
+}
+.text-body .Bibliographia a {
+  font-family: "NewCaledonia";
+}
+.text-body .Epistola [data-rel="contributor"] {
+  font-family: "NewCaledonia";
+  display: block;
+  text-align: right;
+}
+.text-body .Epistola:after {
+  content: "✉";
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: var(--txt-6);
+}
+
+.text-body section {
+  margin-block-end: var(--lead-2xl);
+}
+.text-body table {
+  width: 100%;
+}
+.text-body table th {
+  text-align: left;
+}

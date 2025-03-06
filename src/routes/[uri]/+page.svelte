@@ -1,5 +1,7 @@
 <script>
   import NarrowHeader from "$lib/components/NarrowHeader.svelte"
+  import IssueHeader from "$lib/components/IssueHeader.svelte"
+  import IssueToC from "$lib/components/IssueToC.svelte"
   let { data } = $props()
   let { issue } = data
   let parts = issue.hasPart ? issue.hasPart : []
@@ -7,46 +9,44 @@
     .filter(node => node.type === 'Article')
 </script>
 
+
+<div id="top"></div>
 <NarrowHeader />
 
-<nav>
-  <h2>Table of Contents</h2>
-  <ul>
-    {#each articles as article}
-    <li>
-      <a href="#{article.uri.split('_')[2]}">{article.title}</a>
-      <span class="author">{article.author}</span>
-    </li>
-    {/each}
-  </ul>
-</nav>
+<IssueHeader issue={issue} />
+
+<IssueToC articles={articles} />
 
 <main>
-  {#each issue.hasPart as section , i}
-    <section
-      id="{i + 1}"
-      class="{section.type}">
-      {@html section.html}
-    </section>
-  {/each}
 
+  <nav>
+    <div class="container">
+      <a href="#top">{issue.title}</a>
+    </div>
+  </nav>
+
+  <div class="text-body">
+    {#each issue.hasPart as section , i}
+      <section
+        id="{i + 1}"
+        class="{section.type}">
+        {@html section.html}
+      </section>
+    {/each}
+  </div>
 </main>
 
-<style type="text/css">
+<style>
+  main {
+    border-top: 2px solid var(--black);
+  }
+
   nav {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  nav h2 {
-    text-align: center;
-  }
-  nav li {
-    display: flex;
-    justify-content: space-between;
-    margin-block-end: 0.5rem;
-  }
-  nav .author {
-    text-align: right;
-    padding-inline-start: 2rem;
+    padding-block: var(--lead-xs);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--light-gray);
   }
 </style>

@@ -1,12 +1,16 @@
-<p>
+<nav class="container">
   <a href="/">Verbatim</a>
   <br>
   The Language Quarterly
   <br>
   1974 – 2008
-</p>
+</nav>
 
 <style>
+  nav {
+    padding-block: var(--lead-s);
+    line-height: 1.3;
+  }
   a {
     font-family: "Openface";
     font-weight: 400;
