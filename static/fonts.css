@@ -1,1 +1,35 @@
-fonts.css
+@font-face {
+    font-family: 'Openface';
+    src: url('/OpenfaceNo2.woff2') format('woff2'),
+         url('/OpenfaceNo2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "NewCaledonia";
+  src: url('/NewCaledoniaRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NewCaledonia";
+  src: url('/NewCaledoniaRegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "NewCaledonia";
+  src: url('/NewCaledoniaBlack.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NewCaledonia";
+  src: url('/NewCaledoniaBlackItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+

@@ -2,6 +2,7 @@
   import IssueGrid from "$lib/components/IssueGrid.svelte"
   import ArticlePreview from "$lib/components/ArticlePreview.svelte"
   import TermCallout from "$lib/components/TermCallout.svelte"
+  import Header from "$lib/components/Header.svelte"
   import Search from "$lib/components/Search.svelte"
   import { onMount } from 'svelte'
   let { data } = $props()
@@ -16,11 +17,7 @@
   let placeholderQuery = "Icthyophobia"
 </script>
 
-<header>
-  <h1>Verbatim</h1>
-  <h2>The Language Quarterly</h2>
-  <h3>1974 – 2008</h3>
-</header>
+<Header />
 
 <nav>
   <a href="/articles">Articles</a>
