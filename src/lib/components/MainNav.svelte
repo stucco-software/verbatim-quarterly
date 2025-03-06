@@ -5,7 +5,7 @@
 
   <a href="/articles">Articles</a>
   <a href="/terms-index">Index</a>
-  <a href="/">About</a>
+  <a href="#footer">About</a>
 
   <form action="/search">
     <label for="search">Search:</label>
