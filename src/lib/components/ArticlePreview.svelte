@@ -2,23 +2,29 @@
   let { article } = $props()
 </script>
 
-<article>
-  {@html article.preview}
-  <footer>
-    <a href="/{article.partOf.uri}#{article.uri.split('_')[2]}">Read More ☞</a>
-  </footer>
-</article>
+<div class="container">
+  <h2 class='txt-center'>From the Archive</h2>
+  <article class="multi-col">
+    {@html article.preview}
+    <footer>
+      <a href="/{article.partOf.uri}#{article.uri.split('_')[2]}">Read More ☞</a>
+    </footer>
+  </article>
+</div>
 
 <style type="text/css">
-  article {
-    column-count: 2;
-  }
+  /*h1,
+  h1 + p
   h3,
   h3 + p {
      column-span: all;
   }
   p {
     margin-block-start: 0;
+  }*/
+  h2 {
+    font-family: "Openface";
+    font-size: var(--txt-4);
   }
   footer {
     column-span: all;

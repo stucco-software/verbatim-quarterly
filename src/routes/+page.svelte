@@ -3,6 +3,7 @@
   import ArticlePreview from "$lib/components/ArticlePreview.svelte"
   import TermCallout from "$lib/components/TermCallout.svelte"
   import Header from "$lib/components/Header.svelte"
+  import MainNav from "$lib/components/MainNav.svelte"
   import Search from "$lib/components/Search.svelte"
   import { onMount } from 'svelte'
   let { data } = $props()
@@ -19,22 +20,8 @@
 
 <Header />
 
-<nav>
-  <a href="/articles">Articles</a>
-  <a href="/terms-index">Index</a>
-</nav>
+<MainNav />
 
-<!-- <Search></Search> -->
-<form action="/search">
-  <label for="search">Search</label>
-  <input
-    type="text"
-    name="s"
-    placeholder="{placeholderQuery}…"
-    id="search">
-</form>
-
-<h2 class='txt-center'>Random Article:</h2>
 <ArticlePreview {article}></ArticlePreview>
 
 <TermCallout />

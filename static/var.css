@@ -2,4 +2,33 @@
   /* Type */
   /* Stack */
   --sans-stack:  'Degular', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1240,20,1.2,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --txt--2: clamp(0.7901rem, 0.763rem + 0.1355vw, 0.8681rem);
+  --txt--1: clamp(0.8889rem, 0.8357rem + 0.2657vw, 1.0417rem);
+  --txt-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --txt-1: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem);
+  --txt-2: clamp(1.2656rem, 1.0798rem + 0.9293vw, 1.8rem);
+  --txt-3: clamp(1.4238rem, 1.1678rem + 1.2803vw, 2.16rem);
+  --txt-4: clamp(1.6018rem, 1.2574rem + 1.7221vw, 2.592rem);
+  --txt-5: clamp(1.802rem, 1.3469rem + 2.2754vw, 3.1104rem);
+  --txt-6: clamp(2.0273rem, 1.4342rem + 2.9656vw, 3.7325rem);
+  --txt-7: clamp(2.2807rem, 1.5161rem + 3.8231vw, 4.479rem);
+  --txt-8: clamp(2.5658rem, 1.5887rem + 4.8852vw, 5.3748rem);
+  --txt-9: clamp(2.8865rem, 1.6471rem + 6.1969vw, 6.4497rem);
+  --txt-10: clamp(3.2473rem, 1.6848rem + 7.8128vw, 7.7397rem);
+
+  --lead-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
+  --lead-2xs: clamp(0.5rem, 0.4565rem + 0.2174vw, 0.625rem);
+  --lead-xs: clamp(0.75rem, 0.6848rem + 0.3261vw, 0.9375rem);
+  --lead-s: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --lead-m: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem);
+  --lead-l: clamp(2rem, 1.8261rem + 0.8696vw, 2.5rem);
+  --lead-xl: clamp(3rem, 2.7391rem + 1.3043vw, 3.75rem);
+  --lead-2xl: clamp(4rem, 3.6522rem + 1.7391vw, 5rem);
+  --lead-3xl: clamp(6rem, 5.4783rem + 2.6087vw, 7.5rem);
+
+  --grid-max-width: 77.50rem;
+  --grid-gutter: var(--lead-s-l, clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem));
+  --grid-columns: 12;
 }

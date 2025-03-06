@@ -1,6 +1,32 @@
 html {
   font-family: "NewCaldonia"
 }
+
+body {
+  font-size: var(--txt-0);
+}
+
+.container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
 .txt-center {
   text-align: center;
+}
+
+.multi-col h1 {
+  column-span: all;
+}
+@media (min-width: 54em) {
+  .multi-col {
+    column-count: 2;
+    gap: var(--grid-gutter);
+  }
 }
