@@ -22,8 +22,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
 /*    align-items: center;*/
     padding-block: var(--lead-xs);
   }

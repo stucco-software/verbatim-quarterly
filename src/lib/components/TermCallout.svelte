@@ -11,9 +11,24 @@
 <style type="text/css">
   section {
     text-align: center;
+    border: 2px solid var(--black);
+    max-width: max-content;
+    margin-inline: auto;
+    margin-block: var(--lead-2xl);
+    padding: var(--lead-m)
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "Openface";
+    margin-block-end: var(--lead-m)
   }
   h3 {
-    font-size: 3rem;
+    font-size: var(--txt-6);
     margin: 0;
+    margin-block-end: var(--lead-m);
+  }
+  p {
+    margin-block-end: 0;
   }
 </style>
