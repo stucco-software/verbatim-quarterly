@@ -12,7 +12,15 @@
 
 <NarrowHeader />
 
-<h1 class="txt-center">Search</h1>
+<div class="container">
+  <h1 class="txt-center">Search the Archive</h1>
 
-<Search bind:s={term}></Search>
+  <Search bind:s={term}></Search>
+</div>
 
+<style type="text/css">
+  h1 {
+    font-family: "Openface";
+    font-size: var(--txt-8);
+  }
+</style>

@@ -41,6 +41,9 @@
     border-top: 2px solid var(--black);
   }
 
+  section {
+    scroll-margin-top: var(--lead-3xl);
+  }
   nav {
     padding-block: var(--lead-xs);
     background-color: white;

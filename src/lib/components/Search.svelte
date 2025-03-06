@@ -20,3 +20,9 @@
 </script>
 
 <div id="search"></div>
+
+<style>
+  #search {
+    margin-block-end: var(--lead-3xl);
+  }
+</style>
