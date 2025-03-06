@@ -70,7 +70,11 @@ body {
   margin-block-end: var(--lead-2xl);
 }
 .text-body table {
-  width: 100%;
+  max-width: 90vw;
+  width: max-content;
+  transform: translate3d(-50%, 0, 0);
+  margin-left: 50%;
+}
 }
 .text-body table th {
   text-align: left;
