@@ -1,4 +1,16 @@
 :root {
+
+  /* Grayscale */
+  --white: #fbfbfb;
+  --light-gray: #f0f0f0;
+  --gray: #dcdcdc;
+  --dark-gray: #b0b0b0;
+  --black: #2e2e2e;
+  /* Assignment */
+  --bg-color: var(--light-gray);
+  --txt-color: var(--black);
+
+
   /* Type */
   /* Stack */
   --sans-stack:  'Degular', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;

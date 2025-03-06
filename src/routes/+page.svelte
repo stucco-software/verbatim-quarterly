@@ -24,9 +24,9 @@
 
 <ArticlePreview {article}></ArticlePreview>
 
-<TermCallout />
-
 <IssueGrid {volumes}></IssueGrid>
+
+<TermCallout />
 
 <footer>
   <p>

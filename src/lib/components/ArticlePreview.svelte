@@ -10,6 +10,7 @@
       <a href="/{article.partOf.uri}#{article.uri.split('_')[2]}">Read More ☞</a>
     </footer>
   </article>
+
 </div>
 
 <style type="text/css">
@@ -27,7 +28,6 @@
     font-size: var(--txt-4);
   }
   footer {
-    column-span: all;
-    text-align: right;
+    margin-block-start: var(--lead-m);
   }
 </style>
