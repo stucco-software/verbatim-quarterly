@@ -18,17 +18,17 @@
 
 <NarrowHeader />
 
-<h1>Index</h1>
+<div class="container">
+  <h1>Index</h1>
+  {#each terms as term}
+    {@html term.html}
+  {/each}
+</div>
 
-<form>
-  <label>
-    Find:
-    <input type="type" name="find" bind:value={find}>
-  </label>
-
-</form>
-
-
-{#each terms as term}
-  {@html term.html}
-{/each}
+<style type="text/css">
+  h1 {
+    font-family: "Openface";
+    font-size: var(--txt-5);
+    margin-block-end: var(--lead-xl);
+  }
+</style>
