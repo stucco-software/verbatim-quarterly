@@ -17,7 +17,7 @@
 
 <IssueHeader issue={issue} />
 
-<IssueToC articles={articles} />
+<IssueToC articles={issue.hasPart} />
 
 <main>
 
