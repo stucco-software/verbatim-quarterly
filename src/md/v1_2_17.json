@@ -1,6 +1,7 @@
 {
-  "type": "Article",
-  "title": "Letters {Wendy Thompson}",
-  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">Letters {Wendy Thompson}</h1>\n<p>Somehow this is not at all what I expected.  I would\nappreciate your sending my money back....</p>\n<p>—Wendy Thompson, Ravenna, N.Y.</p>\n<h2></h2>",
-  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">Letters {Wendy Thompson}</h1> <p>Somehow this is not at all what I expected.  I would\nappreciate your sending my money back....</p> <p>—Wendy Thompson, Ravenna, N.Y.</p> <h2></h2>"
+  "type": "Epistola",
+  "title": "Letters Wendy Thompson",
+  "contributor": "Wendy Thompson",
+  "html": "<link rel=\"type\" href=\"Epistola\"><h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Wendy Thompson</span></h1>\n<p>Somehow this is not at all what I expected.  I would\nappreciate your sending my money back....</p>\n<p>—Wendy Thompson, Ravenna, N.Y.</p>\n<h2></h2>",
+  "preview": "<link rel=\"type\" href=\"Epistola\"> <h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Wendy Thompson</span></h1> <p>Somehow this is not at all what I expected.  I would\nappreciate your sending my money back....</p> <p>—Wendy Thompson, Ravenna, N.Y.</p> <h2></h2>"
 }

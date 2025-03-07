@@ -1,6 +1,7 @@
 {
-  "type": "Article",
-  "title": "Letters {Louis T. Milic}",
-  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">Letters {Louis T. Milic}</h1>\n<p>I was happy to see your elegantly printed publication.\n...I think the kind of popularizing intention you have\nbadly needs some development since the layman can\nscarcely read the table of contents of any current journal\ndevoted to language, and language happens to be an enthusiasm\nof many people.</p>\n<p>—Professor Louis T. Milic, The Cleveland State University</p>\n<h1></h1>",
-  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">Letters {Louis T. Milic}</h1> <p>I was happy to see your elegantly printed publication.\n...I think the kind of popularizing intention you have\nbadly needs some development since the layman can\nscarcely read the table of contents of any current journal\ndevoted to language, and language happens to be an enthusiasm\nof many people.</p> <p>—Professor Louis T. Milic, The Cleveland State University</p> <h1></h1>"
+  "type": "Epistola",
+  "title": "Letters Louis T. Milic",
+  "contributor": "Louis T. Milic",
+  "html": "<link rel=\"type\" href=\"Epistola\"><h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Louis T. Milic</span></h1>\n<p>I was happy to see your elegantly printed publication.\n...I think the kind of popularizing intention you have\nbadly needs some development since the layman can\nscarcely read the table of contents of any current journal\ndevoted to language, and language happens to be an enthusiasm\nof many people.</p>\n<p>—Professor Louis T. Milic, The Cleveland State University</p>\n<h1></h1>",
+  "preview": "<link rel=\"type\" href=\"Epistola\"> <h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Louis T. Milic</span></h1> <p>I was happy to see your elegantly printed publication.\n...I think the kind of popularizing intention you have\nbadly needs some development since the layman can\nscarcely read the table of contents of any current journal\ndevoted to language, and language happens to be an enthusiasm\nof many people.</p> <p>—Professor Louis T. Milic, The Cleveland State University</p> <h1></h1>"
 }

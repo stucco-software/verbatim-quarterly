@@ -68,6 +68,8 @@ a:focus {
 .text-body .Bibliographia [data-rel="title"],
 .text-body .Epistola [data-rel="title"],
 .text-body .ObiterDicta [data-rel="title"],
+.text-body .InterAlia [data-rel="title"],
+.text-body .EtymologicaObscura [data-rel="title"],
 .text-body .SicSicSic [data-rel="title"] {
   font-style: normal;
   font-family: "Openface";

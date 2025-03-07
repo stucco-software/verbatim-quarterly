@@ -44,6 +44,12 @@ const enrichType = doc => {
     case title.textContent.includes('OBITER DICTA'):
       linkNode.href = 'ObiterDicta'
       break;
+    case title.textContent.includes('INTER ALIA'):
+      linkNode.href = 'InterAlia'
+      break;
+    case title.textContent.includes('ETYMOLOGICA OBSCURA'):
+      linkNode.href = 'EtymologicaObscura'
+      break;
     case title.textContent.includes('BIBLIOGRAPHIA'):
       linkNode.href = 'Bibliographia'
       break;
@@ -54,6 +60,9 @@ const enrichType = doc => {
       linkNode.href = 'Crossword'
       break;
     case title.textContent.includes('EPISTOLA'):
+      linkNode.href = 'Epistola'
+      break;
+    case title.textContent.includes('Letters {'):
       linkNode.href = 'Epistola'
       break;
     case title.textContent.includes('Crossword Puzzle Answers'):

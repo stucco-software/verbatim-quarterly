@@ -1,6 +1,7 @@
 {
-  "type": "Article",
-  "title": "Letters {Evelyn M Perdue}",
-  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">Letters {Evelyn M Perdue}</h1>\n<p>Of course we'll subscribe again! VERBATIM is the\nmost delightful item the mailman delivers.  Continued success\nto all concerned.</p>\n<p>How do you like this [“phonatic”] effort?:\nUn petit d'un petit s'attend du alle,\nUn petit d'un petit à degré val.\nA le quinze sources\nA le quinze main\nCoup dent peut un petit d'un petit\nDégat de regain.</p>\n<p><em>Evelyn M Perdue, Peterborough, Ont., Canada</em></p>",
-  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">Letters {Evelyn M Perdue}</h1> <p>Of course we'll subscribe again! VERBATIM is the\nmost delightful item the mailman delivers.  Continued success\nto all concerned.</p> <p>How do you like this [“phonatic”] effort?:\nUn petit d'un petit s'attend du alle,\nUn petit d'un petit à degré val.\nA le quinze sources\nA le quinze main\nCoup dent peut un petit d'un petit\nDégat de regain.</p> <p><em>Evelyn M Perdue, Peterborough, Ont., Canada</em></p>"
+  "type": "Epistola",
+  "title": "Letters Evelyn M Perdue",
+  "contributor": "Evelyn M Perdue",
+  "html": "<link rel=\"type\" href=\"Epistola\"><h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Evelyn M Perdue</span></h1>\n<p>Of course we'll subscribe again! VERBATIM is the\nmost delightful item the mailman delivers.  Continued success\nto all concerned.</p>\n<p>How do you like this [“phonatic”] effort?:\nUn petit d'un petit s'attend du alle,\nUn petit d'un petit à degré val.\nA le quinze sources\nA le quinze main\nCoup dent peut un petit d'un petit\nDégat de regain.</p>\n<p><em>Evelyn M Perdue, Peterborough, Ont., Canada</em></p>",
+  "preview": "<link rel=\"type\" href=\"Epistola\"> <h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Evelyn M Perdue</span></h1> <p>Of course we'll subscribe again! VERBATIM is the\nmost delightful item the mailman delivers.  Continued success\nto all concerned.</p> <p>How do you like this [“phonatic”] effort?:\nUn petit d'un petit s'attend du alle,\nUn petit d'un petit à degré val.\nA le quinze sources\nA le quinze main\nCoup dent peut un petit d'un petit\nDégat de regain.</p> <p><em>Evelyn M Perdue, Peterborough, Ont., Canada</em></p>"
 }

@@ -1,6 +1,7 @@
 {
-  "type": "Article",
-  "title": "Letters {Ted Bear}",
-  "html": "<link rel=\"type\" href=\"Article\"><h1 data-rel=\"title\">Letters {Ted Bear}</h1>\n<p>I must agree with reader Frank B. Moorman [VERBATIM II, 1, 3], who says that radio is doing bewildering\nthings to the language.  I just heard an announcer in a commercial say, \"The Colonel has ribs at participating\nlocations\"!</p>\n<p><em>—Ted Bear, Historian, Air Force Flight Ctr. Edwards, California</em></p>\n<h2></h2>",
-  "preview": "<link rel=\"type\" href=\"Article\"> <h1 data-rel=\"title\">Letters {Ted Bear}</h1> <p>I must agree with reader Frank B. Moorman [VERBATIM II, 1, 3], who says that radio is doing bewildering\nthings to the language.  I just heard an announcer in a commercial say, \"The Colonel has ribs at participating\nlocations\"!</p> <p><em>—Ted Bear, Historian, Air Force Flight Ctr. Edwards, California</em></p> <h2></h2>"
+  "type": "Epistola",
+  "title": "Letters Ted Bear",
+  "contributor": "Ted Bear",
+  "html": "<link rel=\"type\" href=\"Epistola\"><h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Ted Bear</span></h1>\n<p>I must agree with reader Frank B. Moorman [VERBATIM II, 1, 3], who says that radio is doing bewildering\nthings to the language.  I just heard an announcer in a commercial say, \"The Colonel has ribs at participating\nlocations\"!</p>\n<p><em>—Ted Bear, Historian, Air Force Flight Ctr. Edwards, California</em></p>\n<h2></h2>",
+  "preview": "<link rel=\"type\" href=\"Epistola\"> <h1 data-rel=\"title\">Letters <span data-rel=\"contributor\">Ted Bear</span></h1> <p>I must agree with reader Frank B. Moorman [VERBATIM II, 1, 3], who says that radio is doing bewildering\nthings to the language.  I just heard an announcer in a commercial say, \"The Colonel has ribs at participating\nlocations\"!</p> <p><em>—Ted Bear, Historian, Air Force Flight Ctr. Edwards, California</em></p> <h2></h2>"
 }
