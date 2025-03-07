@@ -94,11 +94,21 @@ a:focus {
 }
 .text-body table {
   max-width: 90vw;
+  border: 2px dotted var(--ink);
+  padding: var(--lead-s);
+  padding-top: var(--lead-3xs);
   width: max-content;
   transform: translate3d(-50%, 0, 0);
   margin-left: 50%;
 }
-}
+
+
 .text-body table th {
   text-align: left;
+  border-bottom: 2px dotted var(--ink);
+}
+
+.text-body table td {
+  padding-inline-end: 1ch;
+  border-bottom: 2px dotted var(--ink);
 }
