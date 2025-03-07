@@ -59,7 +59,7 @@ a:focus {
 
 
 .text-body [data-rel="title"] {
-  font-style: normal;
+  font-style: italic;
   font-size: var(--txt-6);
   text-wrap: balance;
   text-align: start;
@@ -69,7 +69,7 @@ a:focus {
 .text-body .Epistola [data-rel="title"],
 .text-body .ObiterDicta [data-rel="title"],
 .text-body .SicSicSic [data-rel="title"] {
-  font-style: regular;
+  font-style: normal;
   font-family: "Openface";
   font-size: var(--txt-4);
 }
