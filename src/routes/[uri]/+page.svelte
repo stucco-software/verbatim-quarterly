@@ -2,6 +2,8 @@
   import NarrowHeader from "$lib/components/NarrowHeader.svelte"
   import IssueHeader from "$lib/components/IssueHeader.svelte"
   import IssueToC from "$lib/components/IssueToC.svelte"
+  import SpiralRule from '$lib/components/SpiralRule.svelte'
+
   let { data } = $props()
   let { issue } = data
   let parts = issue.hasPart ? issue.hasPart : []
@@ -32,6 +34,9 @@
         class="{section.type}">
         {@html section.html}
       </section>
+      {#if section.type === 'Article'}
+        <SpiralRule />
+      {/if}
     {/each}
   </div>
 </main>

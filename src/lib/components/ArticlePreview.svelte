@@ -1,4 +1,5 @@
 <script>
+  import SpiralRule from '$lib/components/SpiralRule.svelte'
   let { article } = $props()
 </script>
 
@@ -10,7 +11,7 @@
       <a href="/{article.partOf.uri}#{article.uri.split('_')[2]}">Read More ☞</a>
     </footer>
   </article>
-
+  <SpiralRule />
 </div>
 
 <style type="text/css">
@@ -23,6 +24,7 @@
   p {
     margin-block-start: 0;
   }*/
+
   h2 {
     font-family: "Openface";
     font-size: var(--txt-4);
