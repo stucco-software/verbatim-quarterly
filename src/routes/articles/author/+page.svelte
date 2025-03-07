@@ -10,10 +10,9 @@
   <h1>Articles</h1>
 
   <nav>
-    <span>Alphabetically By Title</span>
-    <a href="/articles/author">Alphabetically By Author</a>
+    <a href="/articles">Alphabetically By Title</a>
+    <span>Alphabetically By Author</span>
   </nav>
-
   <nav>
     {#each letters as letter}
       <a class="nav" href="#{letter}">{letter} </a>

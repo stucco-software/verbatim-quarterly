@@ -1,7 +1,7 @@
 import { getArticles } from '$lib/content.js'
 
 export const csr = false
-const letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+const letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','N/A']
 const articlesMap = new Map([
    ['A', []],
    ['B', []],
@@ -29,22 +29,26 @@ const articlesMap = new Map([
    ['X', []],
    ['Y', []],
    ['Z', []],
+   ['N/A', []],
 ])
 
-const byTitleAsc = (a, b) => {
-  if (a.title < b.title) {
+const byAuthorAsc = (a, b) => {
+  if (a.author < b.author) {
     return -1;
   }
-  if (a.title > b.title) {
+  if (a.author > b.author) {
     return 1;
   }
   return 0;
 }
 
-const sortTerm = 'title'
+const sortTerm = 'author'
 
 const findLetter = (term, i = 0) => {
   let hunt = true
+  if (!term) {
+    return 'N/A'
+  }
   let test = term
         .charAt(i)
         .toUpperCase()
@@ -71,7 +75,7 @@ export const load = async ({params}) => {
   })
 
   articlesMap.forEach((val, key, map) => {
-    const sorted = val.toSorted(byTitleAsc)
+    const sorted = val.toSorted(byAuthorAsc)
     map.set(key, sorted)
   })
 
