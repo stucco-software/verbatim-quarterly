@@ -2,28 +2,34 @@
   let { articles } = $props()
 </script>
 
-<nav class="container">
-  <h2>Contents</h2>
-  <ul>
-    {#each articles as article}
-    <li>
-      <a href="#{article.uri.split('_')[2]}">{article.title}</a>
-      <span class="author">{article.author}</span>
-    </li>
-    {/each}
-  </ul>
-</nav>
+<div class="container">
+  <nav>
+    <h2>Contents</h2>
+    <ul>
+      {#each articles as article}
+      <li>
+        <a href="#{article.uri.split('_')[2]}">{article.title}</a>
+        <span class="author">{article.author}</span>
+      </li>
+      {/each}
+    </ul>
+  </nav>
+</div>
 
 <style type="text/css">
   nav {
-    border: 2px solid var(--black);
+    border: 6px double var(--ink);
     padding: var(--lead-m);
     margin-block-end: var(--lead-xl);
+    max-width: max-content;
+    margin-inline: auto;
   }
   h2 {
     text-align: center;
     margin: 0;
     margin-block-end: var(--lead-m);
+    font-weight: 700;
+    font-size: var(--txt-3);
   }
   ul {
     padding: 0;

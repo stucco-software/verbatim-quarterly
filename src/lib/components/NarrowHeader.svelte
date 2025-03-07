@@ -14,5 +14,8 @@
   a {
     font-family: "Openface";
     font-weight: 400;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: var(--txt-2);
   }
 </style>

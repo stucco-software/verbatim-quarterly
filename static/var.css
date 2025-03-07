@@ -5,10 +5,16 @@
   --light-gray: #f0f0f0;
   --gray: #dcdcdc;
   --dark-gray: #b0b0b0;
-  --black: #2e2e2e;
+  --black: #000;
+
+  --paper: #FEFEF1;
+  --ink: #4C3400;
+/*  --ink: #775240;*/
+  --highlighter: #FCF965;
+
   /* Assignment */
-  --bg-color: var(--light-gray);
-  --txt-color: var(--black);
+  --bg-color: var(--paper);
+  --txt-color: var(--ink);
 
 
   /* Type */

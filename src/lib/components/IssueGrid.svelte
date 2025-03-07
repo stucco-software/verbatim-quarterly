@@ -43,11 +43,15 @@
     padding-block: var(--lead-xs);
     margin: 0;
     list-style-type: none;
+    border-top: 1px solid var(--ink);
   }
-  ul:nth-child(even) {
-    background-color: var(--light-gray);
+  ul:last-child {
+    border-bottom: 1px solid var(--ink);
   }
   li:first-child {
     font-weight: 700;
+  }
+  a {
+    font-weight: 300;
   }
 </style>

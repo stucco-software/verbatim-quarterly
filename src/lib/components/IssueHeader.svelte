@@ -12,7 +12,8 @@
     margin-block: var(--lead-xl);
   }
   h1 {
-    font-size: var(--txt-6);
+    font-size: var(--txt-9);
+    font-style: italic;
     font-weight: 700;
   }
 </style>

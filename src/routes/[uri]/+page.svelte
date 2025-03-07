@@ -46,10 +46,10 @@
   }
   nav {
     padding-block: var(--lead-xs);
-    background-color: white;
+    background-color: var(--paper);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--light-gray);
+    border-bottom: 2px ridge var(--ink);
   }
 </style>

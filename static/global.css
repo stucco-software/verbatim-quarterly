@@ -1,9 +1,25 @@
 html {
+  font-size: 16px;
   font-family: "NewCaldonia"
 }
 
 body {
   font-size: var(--txt-0);
+/*  line-height: 1.65;*/
+/*  font-weight: 300;*/
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+/*  letter-spacing: 0.025em;*/
+}
+
+a {
+  color: var(--black);
+  font-weight: 700;
+}
+a:hover,
+a:focus {
+  background-color: var(--highlighter);
+  outline: thick double var(--highlighter);
 }
 
 .container {
@@ -32,15 +48,21 @@ body {
 }
 
 .text-body {
+  font-size: var(--txt-1);
+  text-align: justify;
   margin-block-start: var(--lead-3xl);
   max-width: 52rem;
   padding-inline: var(--grid-gutter);
   margin-inline: auto;
 }
 
-.text-body .Article [data-rel="title"] {
+
+
+.text-body [data-rel="title"] {
   font-style: italic;
   font-size: var(--txt-6);
+  text-wrap: balance;
+  text-align: start;
 }
 
 .text-body .Bibliographia [data-rel="title"],
