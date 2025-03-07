@@ -167,7 +167,8 @@ const markdown2html = async (md) => {
       .use(rehypeSanitize)
       .use(rehypeStringify)
       .process(md)
-    return result.value
+      // weird footnot issue…
+    return result.value.replaceAll('user-content-user-content', 'user-content')
   } catch (e) {
     console.log(`err rendering markdown:`)
     let preview = md.split('\n')[0]
