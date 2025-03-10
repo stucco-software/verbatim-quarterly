@@ -82,6 +82,8 @@ a:focus {
   font-family: "NewCaledonia";
   display: block;
   text-align: right;
+  font-size: var(--txt-1);
+  font-weight: 700;
 }
 .text-body .Epistola:after {
   content: "✉";
